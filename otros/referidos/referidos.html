@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referidos QvaServi</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <section class="main">
+
+        <figure class="main__figure">
+            <img src="/otros/referidos/img/referidos.png" class="main__img">
+        </figure>
+
+        <div class="main__contact">
+
+            <h2 class="main__title">QvaServi</h2>
+            <p class="main__paragraph">Para la solicitud de su código de referido envie:<br>
+                1- Nombre y Apellidos. <br>
+                2- Las tres primeras letras de su Nombre. <br>
+                3- Las tres primeras letras de su Apellido. <br>
+                4- Los tres primeros números de su carnet. <br>
+                5- Correo donde le llegará su código. <br>
+                6- Número de telefono.
+            </p>
+            
+            <h1 class="mayuscula">Introducir los datos con Mayuscula</h1>
+
+            <form class="main__form" id="form">
+
+                <input id="nombre" name="nombre" type="text" placeholder="Nombre y Apellido" class="main__input" required>
+                <input id="nombre3" name="nombre3" type="text" maxlength="3" placeholder="Nombre" class="main__input" required>
+                <input id="apellido3" name="apellido3" type="text" maxlength="3" placeholder="Apellido" class="main__input" required>
+                <input id="identidad3" name="identidad3" type="text" maxlength="3" placeholder="Identidad" class="main__input" required>
+                <input id="email" name="email" type="email" placeholder="Correo" class="main__input2" required>
+                <input id="telefono" name="telefono" type="text" placeholder="Telefono" class="main__input2" required>
+                <input id="button" type="submit" value="Registrar" class="main__input main__input--send">
+
+
+
+            </form>
+            <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+            <script type="text/javascript"> emailjs.init('OyA0TCtaTqH7XlHCV')</script>
+
+
+
+            <article class="main__social">
+
+                <a href="mailto:qvaservi@gmail.com" class="main__link">
+                    <img src="./img/google-icon.svg" class="main__icon">
+                </a>
+
+                <a href="https://qvaservi.web.app/" class="main__link">
+                    <img src="./img/web.svg" class="main__icon">
+                </a>
+
+                <a href="https://www.facebook.com/qvaservi" class="main__link">
+                    <img src="./img/facebook.svg" class="main__icon">
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+</body>
+<script>
+    const btn = document.getElementById('button');
+
+    document.getElementById('form')
+        .addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            btn.value = 'Solicitando Codigo';
+
+            const serviceID = 'default_service';
+            const templateID = 'template_mmr7ws7';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.value = 'Ya has solicitado un codigo';
+                    alert('Datos enviados correctamente verifique su correo');
+                }, (err) => {
+                    btn.value = 'Reservar';
+                    alert(JSON.stringify(err));
+                });
+        });
+</script>
+
+</html>

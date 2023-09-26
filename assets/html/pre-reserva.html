@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="/assets/css/style-pre-reserva.css" rel="stylesheet">
+
+    <title>Pre-Reserva</title>
+
+</head>
+
+<body>
+    <section class="contact-box">
+        <div class="row no-gutters bg-dark">
+
+            <div class="col-xl-7 col-lg-12 d-flex">
+                <div class="container align-self-center p-6">
+                    <h1 class="text1">Pre-Reserva de Auto 📨</h1>
+
+                    <p class="text2">Ingresa la siguiente información para Reservar.</p>
+
+                    <form id="form">
+                        <div class="form-row mb-2">
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-bold">Nombre <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" placeholder="Tu nombre" id="name" name="name"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-bold">Apellidos <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" placeholder="Tu apellido" name="last" id="last"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-bold">País<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" placeholder="País de residencia" name="pais"
+                                    id="pais" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-bold">Dirección<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" placeholder="Dirección actual" name="dir"
+                                    id="dir" required>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="font-weight-bold">Pasaporte <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" placeholder="Ingresa tu número de pasaporte"
+                                name="numero" id="numero" required>
+                        </div>
+
+
+                        <div class="form-group mb-3">
+                            <label class="font-weight-bold">Número de telefono <span
+                                    class="text-danger">*</span></label>
+                            <input type="text" class="form-control" placeholder="Ingresa tu numero de telefono"
+                                name="telefono" id="telefono" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="font-weight-bold">Correo electrónico <span
+                                    class="text-danger">*</span></label>
+                            <input type="email" class="form-control" placeholder="Ingresa tu correo electrónico"
+                                name="email" id="email" required>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label class="font-weight-bold">Lugar de recogida<span class="text-danger">*</span></label>
+                            <select id="place1" class="form-control" name="place1" required>
+                                <option></option>
+                                <option>La Habana</option>
+                                <option>Camagüey</option>
+                                <option>Ciego de Ávila</option>
+                                <option>Cienfuegos</option>
+                                <option>Granma</option>
+                                <option>Guantánamo</option>
+                                <option>Holguín</option>
+                                <option>Las Tunas</option>
+                                <option>Pinar del Río</option>
+                                <option>Santiago de Cuba</option>
+                                <option>Sancti Spíritus</option>
+                                <option>Matanzas</option>
+                                <option>Villa Clara</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="font-weight-bold">Hora de Recogida<span class="text-danger">*</span></label>
+                            <input type="time" class="form-control" placeholder="Seleccione una hora"
+                                name="hora" id="hora" required>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label class="font-weight-bold">Lugar de entrega <span class="text-danger">*</span></label>
+                            <select id="place2" class="form-control" name="place2" required>
+                                <option></option>
+                                <option>La Habana</option>
+                                <option>Camagüey</option>
+                                <option>Ciego de Ávila</option>
+                                <option>Cienfuegos</option>
+                                <option>Granma</option>
+                                <option>Guantánamo</option>
+                                <option>Holguín</option>
+                                <option>Las Tunas</option>
+                                <option>Pinar del Río</option>
+                                <option>Santiago de Cuba</option>
+                                <option>Sancti Spíritus</option>
+                                <option>Matanzas</option>
+                                <option>Villa Clara</option>
+
+                            </select>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label class="font-weight-bold">Categoria <span class="text-danger">*</span></label>
+                            <select id="category" class="form-control" name="category" required>
+                                <option></option>
+                                <option>Económico Mecánico</option>
+                                <option>Económico Automático</option>
+                                <option>Medio Mecánico</option>
+                                <option>Medio Automático</option>
+
+                            </select>
+                        </div>
+
+                        <div class="form-row mb-2">
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-bold">Desde <span class="text-danger">*</span></label>
+                                <input class="form-control" type="date" name="date1" id="date1" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-bold">Hasta <span class="text-danger">*</span></label>
+                                <input class="form-control" type="date" name="date2" id="date2">
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label class="font-weight-bold">Código de Referido<span
+                                    class="text-danger">🎉</span></label>
+                            <p>Ingrese un código de referidio y obtenga un descuento del 10%, si no tiene uno puede
+                                utilizar el siegiente👉
+                            <h1 class="codigo-referido">JAVJAMN424</h1>
+                            </p>
+
+                            <input type="text" class="form-control" placeholder="Codigo de Referido" name="ref"
+                                id="ref">
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label class="font-weight-bold">Otros Datos de Interés<span
+                                    class="text-danger"></span></label>
+
+                            <textarea class="form-control" name="nota" id="nota" cols="30" rows="5"
+                                placeholder="Notas de su Interés"></textarea>
+                        </div>
+
+
+
+                        <div class="form-group mb-5">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" required>
+                                <label class="form-check-label text-muted">Al seleccionar esta casilla aceptas nuestro
+                                    aviso de <a href="">privacidad</a> y los <a href="">términos y
+                                        condiciones</a>.</label>
+                            </div>
+                        </div>
+
+
+                        <input class="btn btn-success" type="submit" id="button" value="Reservar">
+                        <h1></h1>
+
+                        <a href="/assets/html/pre-reserva.html" class="btn btn-success">Actualizar</a>
+
+
+
+
+
+
+                    </form>
+                    <script type="text/javascript"
+                        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+                    <script type="text/javascript"> emailjs.init('OyA0TCtaTqH7XlHCV')</script>
+
+
+
+
+                    <small class="d-inline-block text-muted mt-5">Todos los derechos reservados | © 2023 Xavier</small>
+                </div>
+
+            </div>
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </section>
+
+</body>
+<script>
+    const btn = document.getElementById('button');
+
+    document.getElementById('form')
+        .addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            btn.value = 'Enviando Reserva...';
+
+            const serviceID = 'default_service';
+            const templateID = 'template_7wdt00j';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.value = 'Reserva Enviada';
+                    alert('Reserva Enviada Correctamente, se le notificará via correo electrónico en las próximas 24 horas para que pueda realizar el pago.');
+                }, (err) => {
+                    btn.value = 'Reservar';
+                    alert(JSON.stringify(err));
+                });
+        });
+</script>
+
+
+</html>
